@@ -1,47 +1,40 @@
 import { motion } from "framer-motion";
 import { Highlight, ScribbleUnderline } from "./ui";
-import { CONTENT, PAGE, PAGE_X } from "../constants/layout";
+import { CONTENT } from "../constants/layout";
 
 const AVATARS = [
   {
     src: "/avatars/ellipse-255.png",
-    className:
-      "top-[40%] left-[-10%] w-[120px] sm:w-[150px] md:w-[170px] lg:w-[220px]",
+    className: "top-[40%] -left-[8%] w-[120px] sm:w-[150px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-261.png",
-    className:
-      "top-[25%] left-[0%] w-[110px] sm:w-[150px] md:w-[170px] lg:w-[220px]",
+    className: "top-[25%] left-[2%] w-[110px] sm:w-[140px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-258.png",
-    className:
-      "top-0 left-[20%] w-[120px] sm:w-[150px] md:w-[170px] lg:w-[220px]",
+    className: "top-0 left-[22%] w-[120px] sm:w-[150px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-256.png",
-    className:
-      "top-[50%] left-[30%] w-[110px] sm:w-[150px] md:w-[170px] lg:w-[220px]",
+    className: "top-[50%] left-[32%] w-[110px] sm:w-[145px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-257.png",
-    className:
-      "top-[15%] left-[50%] w-[115px] sm:w-[145px] md:w-[165px] lg:w-[220px]",
+    className: "top-[15%] left-[50%] w-[115px] sm:w-[145px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-260.png",
     className:
-      "top-[26%] left-[60%] w-[120px] border-4 border-white sm:w-[150px] sm:border-[5px] md:w-[170px] md:border-[6px] lg:w-[220px] sm:top-[28%] md:top-[40%]",
+      "top-[38%] left-[62%] w-[120px] border-4 border-white sm:w-[150px] lg:w-[180px]",
   },
   {
     src: "/avatars/ellipse-259.png",
-    className:
-      "top-0 left-[75%] w-[110px] sm:w-[140px] md:w-[160px] lg:w-[200px]",
+    className: "top-0 left-[76%] w-[110px] sm:w-[140px] lg:w-[170px]",
   },
   {
     src: "/avatars/ellipse-262.png",
-    className:
-      "top-[45%] left-[90%] w-[110px] sm:w-[135px] md:w-[155px] lg:w-[220px]",
+    className: "top-[45%] left-[90%] w-[110px] sm:w-[140px] lg:w-[180px]",
   },
 ];
 
@@ -49,20 +42,27 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className={`relative overflow-hidden bg-white ${PAGE} ${PAGE_X} pb-12`}
+      className="relative overflow-hidden bg-white px-4 pb-12 sm:px-6 lg:px-10"
     >
       {/* HERO TEXT */}
       <motion.div
-        className={`${CONTENT} relative pt-12 text-center sm:pt-16 lg:pt-20`}
+        className="relative mx-auto max-w-[1050px] pt-20 text-center sm:pt-24 lg:pt-24"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
+        {/* Scribble decoration */}
         <motion.img
           src="/avatars/Vector5.png"
           alt=""
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-28 z-0 w-[7.5rem] -translate-x-1/2 sm:top-30 sm:w-[12.5rem] md:top-38 md:w-[25rem] lg:top-46 lg:w-[35rem]"
+          className="
+            pointer-events-none absolute
+            left-1/2 top-[145px] z-0
+            w-[180px] -translate-x-1/2
+            sm:top-[165px] sm:w-[280px]
+            lg:top-[180px] lg:w-[430px]
+          "
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{
@@ -72,21 +72,53 @@ export default function Hero() {
           }}
         />
 
-        <h1 className="relative z-10 font-gerbil text-[28px] leading-9 text-black sm:text-[38px] sm:leading-[3.125rem] md:text-[70px] md:leading-[5.625rem] lg:text-[100px] lg:leading-[7.875rem]">
+        {/* Heading */}
+        <h1
+          className="
+            relative z-10
+            font-gerbil
+            text-[34px]
+            leading-[1.15]
+            tracking-[-0.02em]
+            text-black
+
+            sm:text-[48px]
+            md:text-[58px]
+            lg:text-[68px]
+            lg:leading-[1.12]
+          "
+        >
           The{" "}
-          <ScribbleUnderline widthClass="w-[5.5rem] sm:w-[7.5rem] md:w-[10rem] lg:w-[12rem]">
+          <ScribbleUnderline widthClass="w-[6rem] sm:w-[9rem] lg:w-[12rem]">
             thinkers
           </ScribbleUnderline>{" "}
           and
           <br />
+
           doers were ch
           <Highlight tone="blush">anging</Highlight>
           <br />
+
           the <Highlight tone="mint">status</Highlight> Quo with
         </h1>
 
+        {/* Description */}
         <motion.p
-          className="mx-auto mt-10 max-w-[90%] font-satoshi text-sm leading-6 text-black sm:max-w-[43.75rem] sm:text-base sm:leading-7 md:max-w-[51.25rem] md:text-xl md:leading-8 lg:text-2xl lg:leading-9"
+          className="
+            mx-auto mt-8
+            max-w-[700px]
+            font-satoshi
+            text-[13px]
+            leading-5
+            text-black
+
+            sm:text-[14px]
+            sm:leading-6
+
+            lg:mt-9
+            lg:text-[15px]
+            lg:leading-6
+          "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -101,9 +133,9 @@ export default function Hero() {
         </motion.p>
       </motion.div>
 
-      {/* DRAGGABLE AVATARS */}
+      {/* AVATARS */}
       <motion.div
-        className={`${CONTENT} relative mt-20 h-[26.25rem] w-full`}
+        className={`${CONTENT} relative mx-auto mt-12 h-[26rem] w-full`}
         initial="hidden"
         animate="visible"
         variants={{
@@ -121,15 +153,10 @@ export default function Hero() {
             key={avatar.src}
             src={avatar.src}
             alt=""
-
-            /* DRAG FUNCTIONALITY */
             drag
             dragElastic={0.2}
             dragMomentum={false}
-
             className={`absolute cursor-grab select-none rounded-full object-cover active:cursor-grabbing ${avatar.className}`}
-
-            /* ENTRANCE ANIMATION */
             variants={{
               hidden: {
                 opacity: 0,
@@ -146,10 +173,8 @@ export default function Hero() {
                 },
               },
             }}
-
-            /* HOVER ANIMATION */
             whileHover={{
-              scale: 1.04,
+              scale: 1.06,
               y: -6,
               transition: {
                 type: "spring",
@@ -157,12 +182,9 @@ export default function Hero() {
                 damping: 20,
               },
             }}
-
-            /* DRAG ANIMATION */
             whileDrag={{
               scale: 1.1,
               zIndex: 50,
-              cursor: "grabbing",
             }}
           />
         ))}
