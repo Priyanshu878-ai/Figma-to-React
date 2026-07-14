@@ -70,12 +70,11 @@ export function CircleImage({ src, alt = "", className = "" }) {
   return (
     <div
       className={`
-        group relative
-        size-[260px]
+        group
+        relative
+        size-[280px]
         overflow-hidden
         rounded-full
-        sm:size-[320px]
-        lg:size-[500px]
         ${className}
       `}
     >
