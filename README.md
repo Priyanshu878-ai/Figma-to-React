@@ -3,7 +3,7 @@
 A responsive React implementation of the "Elementum" landing page, built from a Figma design.
 
 ## Live Demo
-[Add your Vercel link here after deploying]
+https://elementum-landing-sage.vercel.app/
 
 ## Tech Stack
 - React 19
