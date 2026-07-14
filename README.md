@@ -1,6 +1,6 @@
 # Elementum — Landing Page
 
-A responsive React implementation of the "Elementum" landing page, built from a Figma design as part of the Prodigy InfoTech Full-Stack Web Development internship screening assignment.
+A responsive React implementation of the "Elementum" landing page, built from a Figma design.
 
 ## Live Demo
 [Add your Vercel link here after deploying]
