@@ -69,9 +69,28 @@ export function PillButton({ children, className = "", ...props }) {
 export function CircleImage({ src, alt = "", className = "" }) {
   return (
     <div
-      className={`relative size-[260px] overflow-hidden rounded-full sm:size-[360px] lg:size-[600px] ${className}`}
+      className={`
+        group relative
+        size-[260px]
+        overflow-hidden
+        rounded-full
+        sm:size-[320px]
+        lg:size-[500px]
+        ${className}
+      `}
     >
-      <img src={src} alt={alt} className="size-full object-cover" />
+      <img
+        src={src}
+        alt={alt}
+        className="
+          size-full
+          object-cover
+          transition-transform
+          duration-500
+          ease-out
+          group-hover:scale-105
+        "
+      />
     </div>
   );
 }
