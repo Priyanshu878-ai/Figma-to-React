@@ -7,26 +7,46 @@ export default function Testimonials() {
       id="faqs"
       className="relative min-h-[620px] overflow-hidden bg-white px-4 py-14 sm:py-16 lg:min-h-[720px] lg:px-10 lg:py-20"
     >
-      {/* Background avatars */}
+      {/* Background avatars with hover + floating animation */}
       <motion.img
         src="/avatars/image.png"
         alt=""
         aria-hidden
         className="
-          pointer-events-none absolute
+          absolute
           left-1/2 top-8 z-0
           w-[125%] max-w-[1800px]
           -translate-x-1/2
+          cursor-pointer
           object-contain
         "
         initial={{ opacity: 0, scale: 1.02 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.15 }}
-        transition={{ duration: 0.8 }}
+        animate={{
+          y: [0, -8, 0],
+        }}
+        transition={{
+          opacity: { duration: 0.8 },
+          scale: { duration: 0.8 },
+          y: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
+        whileHover={{
+          scale: 1.025,
+          y: -10,
+          transition: {
+            duration: 0.3,
+            ease: "easeOut",
+          },
+        }}
       />
 
       {/* Main content */}
-<div className="relative z-10 mx-auto flex max-w-[780px] flex-col items-center pt-24 sm:pt-28 lg:pt-32">
+      <div className="relative z-10 mx-auto flex max-w-[780px] flex-col items-center pt-24 sm:pt-28 lg:pt-32">
         
         {/* Heading */}
         <motion.h2
@@ -67,35 +87,35 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Testimonial Card */}
-<motion.blockquote
-  className="
-    relative
-    w-full
-    max-w-[840px]
-    rounded-[34px]
-    bg-[#D7EEDD]/55
-    px-10
-    py-9
-    sm:px-14
-    sm:py-10
-    cursor-default
-  "
-  initial={{ opacity: 0, y: 30, scale: 0.98 }}
-  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-  viewport={{ once: true, amount: 0.3 }}
-  transition={{ duration: 0.65 }}
-  whileHover={{
-    y: -6,
-    scale: 1.015,
-    boxShadow: "0 20px 50px rgba(0, 0, 0, 0.10)",
-    transition: {
-      duration: 0.25,
-      ease: "easeOut",
-    },
-  }}
->
+        <motion.blockquote
+          className="
+            relative
+            w-full
+            max-w-[840px]
+            cursor-default
+            rounded-[34px]
+            bg-[#D7EEDD]/55
+            px-10
+            py-9
+            sm:px-14
+            sm:py-10
+          "
+          initial={{ opacity: 0, y: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.65 }}
+          whileHover={{
+            y: -6,
+            scale: 1.015,
+            boxShadow: "0 20px 50px rgba(0, 0, 0, 0.10)",
+            transition: {
+              duration: 0.25,
+              ease: "easeOut",
+            },
+          }}
+        >
           {/* Left quote */}
-          <div className="absolute left-7 top-5 flex gap-0.5">
+          <div className="absolute left-5 top-5 flex gap-0.5">
             <img
               src="/avatars/quote-l.svg"
               alt=""
@@ -123,16 +143,18 @@ export default function Testimonials() {
           </div>
 
           {/* Text */}
-<p className="
-  mx-auto
-  max-w-[620px]
-  text-center
-  font-satoshi
-  text-[15px]
-  leading-[1.6]
-  text-black
-  sm:text-[17px]
-">
+          <p
+            className="
+              mx-auto
+              max-w-[620px]
+              text-center
+              font-satoshi
+              text-[15px]
+              leading-[1.6]
+              text-black
+              sm:text-[17px]
+            "
+          >
             Elementum delivered the site within the timeline as they requested.
             In the end, the client found a 50% increase in traffic within days
             since its launch. They also had an impressive ability to use
