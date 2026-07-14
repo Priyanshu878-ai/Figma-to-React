@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Gerbil";
+  src: url("/fonts/gerbil.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-satoshi: "Satoshi", system-ui, sans-serif;
+  --font-gerbil: "Gerbil", system-ui, sans-serif;
+  --color-yellow: #ffc250;
+  --color-mint: #d7eedd;
+  --color-blush: #ffc2ea;
+  --color-ink: #000000;
+  --color-muted: #b1b1b1;
+  --color-footer: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-satoshi);
+  color: var(--color-ink);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.font-gerbil {
+  font-family: var(--font-gerbil);
+}
+
+.font-satoshi {
+  font-family: var(--font-satoshi);
+}
+
+.mark {
+  display: inline;
+  padding: 0 0.12em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.mark-yellow {
+  background-color: var(--color-yellow);
+}
+
+.mark-mint {
+  background-color: var(--color-mint);
+}
+
+.mark-blush {
+  background-color: var(--color-blush);
+}
