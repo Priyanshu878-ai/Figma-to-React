@@ -6,42 +6,42 @@ const AVATARS = [
   {
     src: "/avatars/ellipse-255.png",
     className:
-      "top-[40%] -left-[5%] w-[80px] sm:w-[100px] lg:w-[130px]",
+      "top-[115px] -left-[7%] w-[105px] sm:w-[120px] lg:w-[135px]",
   },
   {
     src: "/avatars/ellipse-261.png",
     className:
-      "top-[25%] left-[3%] w-[75px] sm:w-[95px] lg:w-[125px]",
+      "top-[85px] left-[3%] w-[100px] sm:w-[115px] lg:w-[130px]",
   },
   {
     src: "/avatars/ellipse-258.png",
     className:
-      "top-0 left-[22%] w-[85px] sm:w-[105px] lg:w-[135px]",
+      "top-0 left-[23%] w-[110px] sm:w-[125px] lg:w-[140px]",
   },
   {
     src: "/avatars/ellipse-256.png",
     className:
-      "top-[48%] left-[33%] w-[80px] sm:w-[100px] lg:w-[125px]",
+      "top-[135px] left-[31%] w-[105px] sm:w-[120px] lg:w-[135px]",
   },
   {
     src: "/avatars/ellipse-257.png",
     className:
-      "top-[15%] left-[51%] w-[80px] sm:w-[100px] lg:w-[130px]",
+      "top-[30px] left-[49%] w-[110px] sm:w-[125px] lg:w-[140px]",
   },
   {
     src: "/avatars/ellipse-260.png",
     className:
-      "top-[35%] left-[63%] w-[85px] border-4 border-white sm:w-[105px] lg:w-[135px]",
+      "top-[85px] left-[59%] w-[105px] sm:w-[120px] lg:w-[135px]",
   },
   {
     src: "/avatars/ellipse-259.png",
     className:
-      "top-0 left-[77%] w-[75px] sm:w-[95px] lg:w-[120px]",
+      "top-0 left-[75%] w-[110px] sm:w-[125px] lg:w-[140px]",
   },
   {
     src: "/avatars/ellipse-262.png",
     className:
-      "top-[42%] left-[91%] w-[80px] sm:w-[100px] lg:w-[130px]",
+      "top-[95px] left-[91%] w-[105px] sm:w-[120px] lg:w-[135px]",
   },
 ];
 
@@ -142,7 +142,7 @@ export default function Hero() {
 
       {/* AVATARS */}
       <motion.div
-        className={`${CONTENT} relative mx-auto mt-12 h-[26rem] w-full`}
+className="relative mx-auto mt-12 h-[300px] w-full max-w-[1450px]"
         initial="hidden"
         animate="visible"
         variants={{
