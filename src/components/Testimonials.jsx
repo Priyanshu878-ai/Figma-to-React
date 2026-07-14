@@ -5,50 +5,78 @@ export default function Testimonials() {
   return (
     <section
       id="faqs"
-      className="relative min-h-[620px] overflow-hidden bg-white px-4 py-14 sm:py-16 lg:min-h-[720px] lg:px-10 lg:py-20"
+      className="
+        relative
+        min-h-[620px]
+        overflow-hidden
+        bg-white
+        px-4
+        py-14
+        sm:py-16
+        lg:min-h-[720px]
+        lg:px-10
+        lg:py-20
+      "
     >
-      {/* Background avatars with hover + floating animation */}
+      {/* ALL BACKGROUND AVATARS */}
       <motion.img
         src="/avatars/image.png"
         alt=""
         aria-hidden
         className="
           absolute
-          left-1/2 top-8 z-0
-          w-[125%] max-w-[1800px]
+          left-1/2
+          top-8
+          z-0
+          w-[98%]
+          max-w-[1600px]
           -translate-x-1/2
           cursor-pointer
           object-contain
         "
-        initial={{ opacity: 0, scale: 1.02 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.15 }}
-        animate={{
-          y: [0, -8, 0],
+        initial={{
+          opacity: 0,
+          scale: 0.98,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+        }}
+        viewport={{
+          once: true,
+          amount: 0.1,
         }}
         transition={{
-          opacity: { duration: 0.8 },
-          scale: { duration: 0.8 },
-          y: {
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
+          duration: 0.8,
+          ease: "easeOut",
         }}
         whileHover={{
-          scale: 1.025,
-          y: -10,
+          scale: 1.015,
+          y: -5,
           transition: {
-            duration: 0.3,
-            ease: "easeOut",
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
           },
         }}
       />
 
-      {/* Main content */}
-      <div className="relative z-10 mx-auto flex max-w-[780px] flex-col items-center pt-24 sm:pt-28 lg:pt-32">
-        
-        {/* Heading */}
+      {/* MAIN CONTENT */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          max-w-[780px]
+          flex-col
+          items-center
+          pt-24
+          sm:pt-28
+          lg:pt-32
+        "
+      >
+        {/* HEADING */}
         <motion.h2
           className="
             mb-1
@@ -61,23 +89,50 @@ export default function Testimonials() {
             sm:text-[38px]
             lg:text-[46px]
           "
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
+          initial={{
+            opacity: 0,
+            y: 24,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.55,
+          }}
         >
           What <Highlight tone="mint">our customer</Highlight>
           <br />
           says About Us
         </motion.h2>
 
-        {/* Orange underline */}
+        {/* UNDERLINE */}
         <motion.div
-          className="mb-7 h-5 w-36 sm:w-44 lg:mb-8 lg:w-48"
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          className="
+            mb-7
+            h-5
+            w-36
+            sm:w-44
+            lg:mb-8
+            lg:w-48
+          "
+          initial={{
+            opacity: 0,
+            x: -20,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
         >
           <img
             src="/avatars/title-line.svg"
@@ -86,7 +141,7 @@ export default function Testimonials() {
           />
         </motion.div>
 
-        {/* Testimonial Card */}
+        {/* TESTIMONIAL CARD */}
         <motion.blockquote
           className="
             relative
@@ -100,21 +155,35 @@ export default function Testimonials() {
             sm:px-14
             sm:py-10
           "
-          initial={{ opacity: 0, y: 30, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.65 }}
+          initial={{
+            opacity: 0,
+            y: 30,
+            scale: 0.98,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.3,
+          }}
+          transition={{
+            duration: 0.65,
+          }}
           whileHover={{
             y: -6,
             scale: 1.015,
             boxShadow: "0 20px 50px rgba(0, 0, 0, 0.10)",
             transition: {
-              duration: 0.25,
-              ease: "easeOut",
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
             },
           }}
         >
-          {/* Left quote */}
+          {/* LEFT QUOTE */}
           <div className="absolute left-5 top-5 flex gap-0.5">
             <img
               src="/avatars/quote-l.svg"
@@ -128,7 +197,7 @@ export default function Testimonials() {
             />
           </div>
 
-          {/* Right quote */}
+          {/* RIGHT QUOTE */}
           <div className="absolute bottom-5 right-7 flex gap-0.5">
             <img
               src="/avatars/quote-r.svg"
@@ -142,7 +211,7 @@ export default function Testimonials() {
             />
           </div>
 
-          {/* Text */}
+          {/* TEXT */}
           <p
             className="
               mx-auto
