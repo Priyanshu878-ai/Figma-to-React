@@ -59,7 +59,7 @@ export default function Features() {
             items-center
             gap-12
             lg:grid-cols-[1fr_380px]
-            lg:gap-20
+            lg:gap-8
           "
           variants={fadeUp}
           initial="hidden"
@@ -144,7 +144,7 @@ export default function Features() {
             gap-12
             lg:mt-[95px]
             lg:grid-cols-[380px_1fr]
-            lg:gap-[145px]
+            lg:gap-10
           "
           variants={fadeUp}
           initial="hidden"
