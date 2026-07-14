@@ -5,36 +5,43 @@ import { CONTENT } from "../constants/layout";
 const AVATARS = [
   {
     src: "/avatars/ellipse-255.png",
-    className: "top-[40%] -left-[8%] w-[120px] sm:w-[150px] lg:w-[180px]",
+    className:
+      "top-[40%] -left-[5%] w-[80px] sm:w-[100px] lg:w-[130px]",
   },
   {
     src: "/avatars/ellipse-261.png",
-    className: "top-[25%] left-[2%] w-[110px] sm:w-[140px] lg:w-[180px]",
+    className:
+      "top-[25%] left-[3%] w-[75px] sm:w-[95px] lg:w-[125px]",
   },
   {
     src: "/avatars/ellipse-258.png",
-    className: "top-0 left-[22%] w-[120px] sm:w-[150px] lg:w-[180px]",
+    className:
+      "top-0 left-[22%] w-[85px] sm:w-[105px] lg:w-[135px]",
   },
   {
     src: "/avatars/ellipse-256.png",
-    className: "top-[50%] left-[32%] w-[110px] sm:w-[145px] lg:w-[180px]",
+    className:
+      "top-[48%] left-[33%] w-[80px] sm:w-[100px] lg:w-[125px]",
   },
   {
     src: "/avatars/ellipse-257.png",
-    className: "top-[15%] left-[50%] w-[115px] sm:w-[145px] lg:w-[180px]",
+    className:
+      "top-[15%] left-[51%] w-[80px] sm:w-[100px] lg:w-[130px]",
   },
   {
     src: "/avatars/ellipse-260.png",
     className:
-      "top-[38%] left-[62%] w-[120px] border-4 border-white sm:w-[150px] lg:w-[180px]",
+      "top-[35%] left-[63%] w-[85px] border-4 border-white sm:w-[105px] lg:w-[135px]",
   },
   {
     src: "/avatars/ellipse-259.png",
-    className: "top-0 left-[76%] w-[110px] sm:w-[140px] lg:w-[170px]",
+    className:
+      "top-0 left-[77%] w-[75px] sm:w-[95px] lg:w-[120px]",
   },
   {
     src: "/avatars/ellipse-262.png",
-    className: "top-[45%] left-[90%] w-[110px] sm:w-[140px] lg:w-[180px]",
+    className:
+      "top-[42%] left-[91%] w-[80px] sm:w-[100px] lg:w-[130px]",
   },
 ];
 
